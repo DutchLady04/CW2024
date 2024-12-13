@@ -5,8 +5,8 @@ public class LevelOneHalf extends LevelParent {
     private static final String BACKGROUND_IMAGE_NAME = "/com/example/demo/images/background1.jpg"; // Ensure this path is correct
     private static final String NEXT_LEVEL = "com.example.demo.LevelTwo";
     private static final int TOTAL_ENEMIES = 10; // Double the total enemies compared to LevelOne
-    private static final int KILLS_TO_ADVANCE = 20; // Double the kills to advance compared to LevelOne
-    private static final double ENEMY_SPAWN_PROBABILITY = .40; // Double the spawn probability compared to LevelOne
+    private static final int KILLS_TO_ADVANCE = 30; // Triple the kills to advance compared to LevelOne
+    private static final double ENEMY_SPAWN_PROBABILITY = .70; // Double the spawn probability compared to LevelOne
     private static final int PLAYER_INITIAL_HEALTH = 5;
 
     public LevelOneHalf(double screenHeight, double screenWidth) {
