@@ -16,14 +16,25 @@ import javafx.stage.Stage;
 import javafx.geometry.Pos;
 import javafx.scene.layout.VBox;
 
+/**
+ * MainMenu class responsible for displaying the main menu of the game.
+ */
 public class MainMenu {
 
     private final Stage stage;
 
+    /**
+     * Constructor for the MainMenu class.
+     *
+     * @param stage The primary stage for the application.
+     */
     public MainMenu(Stage stage) {
         this.stage = stage;
     }
 
+    /**
+     * Displays the main menu with a background image, title, and start button.
+     */
     public void show() {
         StackPane root = new StackPane();
 
@@ -66,6 +77,9 @@ public class MainMenu {
         stage.show();
     }
 
+    /**
+     * Starts the game by initializing the Controller and launching the game.
+     */
     private void startGame() {
         Controller controller = new Controller(stage);
         controller.launchGame();

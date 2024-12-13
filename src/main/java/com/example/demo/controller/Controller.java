@@ -9,15 +9,26 @@ import com.example.demo.LevelParent;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
+/**
+ * Controller class responsible for managing the game levels and transitions.
+ */
 public class Controller {
 
 	private static final String LEVEL_ONE_CLASS_NAME = "com.example.demo.LevelOne";
 	private final Stage stage;
 
+	/**
+	 * Constructor for the Controller class.
+	 *
+	 * @param stage The primary stage for the application.
+	 */
 	public Controller(Stage stage) {
 		this.stage = stage;
 	}
 
+	/**
+	 * Launches the game by transitioning to the first level.
+	 */
 	public void launchGame() {
 		try {
 			goToLevel(LEVEL_ONE_CLASS_NAME);
@@ -26,6 +37,11 @@ public class Controller {
 		}
 	}
 
+	/**
+	 * Transitions to the specified level.
+	 *
+	 * @param className The fully qualified name of the level class.
+	 */
 	private void goToLevel(String className) {
 		try {
 			System.out.println("Controller: Transitioning to " + className);
@@ -48,6 +64,11 @@ public class Controller {
 		}
 	}
 
+	/**
+	 * Displays an error alert with the given exception's message.
+	 *
+	 * @param e The exception to display in the alert.
+	 */
 	private void showErrorAlert(Exception e) {
 		Alert alert = new Alert(AlertType.ERROR);
 		alert.setTitle("Error");
